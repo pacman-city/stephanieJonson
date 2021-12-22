@@ -33,12 +33,26 @@ const sliderSlide = css`
 
         border-radius: 5px;
         border: 25px solid #BF9C244C;
-        transition: border-color linear 0.3s;
+        transition: border-color linear 0.5s;
     }
 
     &.swiper-slide-active{
         background-blend-mode: darken;
         background-color: #00000040;
+
+        @media screen and (min-width: 768px) {
+            animation: background-fade 0.5s linear forwards;
+    
+            @keyframes background-fade {
+                from {
+                    background-color: #fff;
+                }
+    
+                to {
+                    background-color: #00000040;
+                }
+            }
+        }
     }
 
     &:not(.swiper-slide-active) {
@@ -47,7 +61,7 @@ const sliderSlide = css`
         }
 
         span {
-            transition: border-color linear 0.15s;
+            transition: border-color ease-out 0.7s;
             border: 25px solid transparent;
         }
     }
@@ -74,14 +88,6 @@ const sliderContentSlide = css`
             content: '';
             width: 10px;
         }
-    }
-
-    a {
-        display: inline-block;
-        color: #004FE8;
-        font-weight: 500;
-        font-size: 14px;
-        text-decoration: underline;
     }
 
     span {
@@ -155,7 +161,6 @@ export const TestimonialsContainerMobile = styled.div`
     .button-sqr {
         margin: 0 auto;
         width: 217px;
-        height: 53px;
     }
 `;
 
@@ -244,7 +249,6 @@ export const TestimonialsContainer = styled.div`
     .button-sqr {
         margin: 50px 0 0;
         width: 217px;
-        height: 53px;
     }
 
     @media screen and (min-width: 992px) {

@@ -13,9 +13,8 @@ SwiperCore.use([Pagination, Navigation, A11y]);
 const Slider = ({ services, isSmall }) => (
     <Swiper
         spaceBetween={50}
-        slidesPerView={isSmall ? 1.5 : 1}
-        direction={'horizontal'}
-        speed={300}
+        slidesPerView={isSmall ? 1.7 : 1}
+        speed={500}
         loop={true}
         centeredSlides={true}
         pagination={{

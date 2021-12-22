@@ -26,7 +26,7 @@ export const OurServiceContainer = styled.div`
         padding: 15px;
         background: #0000004C no-repeat center/cover url(${img});
         background-blend-mode: soft-light;
-        box-shadow: 0 10px 30px 0 #00000040;
+        box-shadow: 3px 5px 20px 2px #0000004C;
 
         div {
             height: 100%;
@@ -46,7 +46,19 @@ export const OurServiceContainer = styled.div`
     .button-sqr {
         margin: 0 auto;
         width: 187px;
-        height: 53px;
+    }
+
+    
+    @media (min-width: 390px) {
+        .swiper-slide {
+            padding: 0 8%;
+        }
+    }
+
+    @media (min-width: 576px) {
+        .swiper-slide {
+            padding: 0;
+        }
     }
 
     @media (min-width: 768px) {

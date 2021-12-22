@@ -39,6 +39,7 @@ const Menu = () => {
                 <div className="submenu">
                     <Link to='/'>Home</Link>
                     <Link to='/team'>About me</Link>
+                    <Link to='/profile'>profile</Link>
                     <Link to='/services'>Services & Prices</Link>
                     <Link to='/special'>Special Offers</Link>
                     <Link to='/availability'>My Availability</Link>

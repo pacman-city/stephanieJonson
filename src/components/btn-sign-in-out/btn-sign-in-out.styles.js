@@ -21,12 +21,12 @@ export const ButtonContainer = styled.button`
 
     @media screen and (min-width: 768px) {
         font-size: 20px;
-
+        
         span {
             margin: 10px 0 0 10px;
-            border-bottom: 1.5px solid;
+            border-width: 2px;
         }
-
+        
         svg {
             height: 40px;
         }
@@ -34,5 +34,9 @@ export const ButtonContainer = styled.button`
 
     @media screen and (min-width: 1200px) {
         padding-left: 20px;
+        span {
+            margin: 10px 0 0 10px;
+            border-width: 2.5px;
+        }
     }
 `;

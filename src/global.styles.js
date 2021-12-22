@@ -1,13 +1,19 @@
 import { createGlobalStyle, css } from 'styled-components';
 import NTR from './assets/fonts/NTR-Regular.woff';
+import Norican from './assets/fonts/Norican-Regular.woff';
 import Gilroy400 from './assets/fonts/Gilroy-Regular.woff';
 import Gilroy500 from './assets/fonts/Gilroy-Medium.woff';
 import Gilroy600 from './assets/fonts/Gilroy-SemiBold.woff';
 import Gilroy700 from './assets/fonts/Gilroy-Bold.woff';
 import Gilroy900 from './assets/fonts/Gilroy-Black.woff';
 import arrowRight from './assets/images/svg/arrow-right.svg';
+import arrowRightLg from './assets/images/svg/arrow-right-lg.svg';
 import arrowLeft from './assets/images/svg/arrow-left.svg';
+import arrowLeftLg from './assets/images/svg/arrow-left-lg.svg';
 import lineHorizontal from './assets/images/svg/line-horizontal-gold.svg';
+import background from './assets/images/image2.jpg';
+import svgLine from './assets/images/svg/line-vertical-white.svg';
+import logoImage from './assets/images/image4.png';
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -95,6 +101,10 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    b {
+        font-weight: 700;
+    }
+
     ul {
         list-style: none;
     }
@@ -132,6 +142,7 @@ export const GlobalStyle = createGlobalStyle`
 
     .button-sqr {
         padding: 0;
+        height: 53px;
 
         display: flex;
         align-items: center;
@@ -161,6 +172,17 @@ export const GlobalStyle = createGlobalStyle`
             line-height: 0;
         }
     }
+
+    .link-blue {
+        display: inline-block;
+        font-family: Gilroy;
+        font-size: 15px;
+        font-weight: 500;
+        font-weight: normal;
+        text-decoration: underline;
+        color: #004FE8;
+    }
+
 
     .container {
         padding-left: 10px;
@@ -192,6 +214,8 @@ export const GlobalStyle = createGlobalStyle`
         visibility: hidden;
 
         @media screen and (min-width: 355px) {
+            display: block;
+            margin: 0 auto;
             visibility: visible;
             padding-top: 30px;
             justify-self: center;
@@ -200,6 +224,7 @@ export const GlobalStyle = createGlobalStyle`
             line-height: 1;
             font-weight: 500;
             color: white;
+            text-align: center;
 
             &:after {
                 content: '.';
@@ -225,8 +250,17 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 400;
         font-style: normal;
         font-display: swap;
-        src: local('Noto Sans Regular'),
+        src: local('NTR'),
             url(${NTR}) format('woff');
+    }
+
+    @font-face {
+        font-family: 'Norican';
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: local('Norican'),
+            url(${Norican}) format('woff');
     }
 
     @font-face {
@@ -321,5 +355,105 @@ export const paginationStyles = css`
 
     .swiper-button-next::after {
         content: url(${arrowRight});
+    }
+`;
+
+export const experienceStyles = css`
+    padding: 70px 0;
+    background: no-repeat center/cover linear-gradient(#2F3438FA, #2F3438FA), url(${background});
+
+    h2 {
+        margin-bottom: 30px;
+        color: white;
+    }
+
+    .logo {
+        justify-self: center;
+        width: 160px;
+        height: 176px;
+        background: no-repeat center/cover url(${logoImage});
+    }
+
+    .experinece-item {
+        color: white;
+        font-size: 18px;
+        padding-left: 15px;
+        background: no-repeat left top 11px / auto 60px url(${svgLine});
+
+        span {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 40px;
+            font-weight: 700;
+            color: #BF9C24;
+        }
+    }
+
+    @media (min-width: 768px) {
+        h2 {
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .content {
+            background: no-repeat center/200px 220px url(${logoImage});
+        }
+
+        .experinece-item{
+            background-size: auto 70px;
+
+            span {
+                font-size: 50px;
+            }
+        }
+
+       .col {
+            text-align: right;
+            padding-right: 15px;
+            background-position: right top 11px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        padding: 100px 0;
+        
+        h2 {
+            margin-bottom: 90px;
+        }
+
+        .content {
+            background-size: 285px 310px
+        }
+    }
+`;
+
+export const swiperNav = css`
+    .swiper-button-prev::after {
+        content: url(${arrowLeft});
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
+    }
+
+    .swiper-button-next::after {
+        content: url(${arrowRight});
+    }
+`;
+
+export const swiperNavLg = css`
+    .swiper-button-prev::after {
+        content: url(${arrowLeftLg});
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
+    }
+
+    .swiper-button-next::after {
+        content: url(${arrowRightLg});
     }
 `;

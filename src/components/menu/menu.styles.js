@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import svgMask from '../../assets/images/svg/sidebar-mask.svg';
 
 
 export const MenuContainer = styled.div`
@@ -6,16 +7,16 @@ export const MenuContainer = styled.div`
     top: 0;
     left: 0;
     height: 100vh;
-    max-height: 1368px;
     width: 100%;
-
+    background-color: #292C2733;
+    
     .menu-container {
         height: 100%;
         width: 100%;
         padding: 25px 10px;
-
+        
         backdrop-filter: blur(8px);
-        background-color: #292C2799;
+        background-color: #292C2766;
         overflow-y: auto;
     }
 
@@ -67,6 +68,7 @@ export const MenuContainer = styled.div`
 
     @media screen and (min-width: 768px) {
         padding-right: 125px;
+        background: #292C2733 no-repeat top 300px right/125px auto url(${svgMask});
 
         .menu-container{
             padding: 25px 15px;
@@ -100,7 +102,7 @@ export const MenuContainer = styled.div`
 
     @media screen and (min-width: 1200px) {
         height: 100%;
-        background-color: unset;
+        background: unset;
         backdrop-filter: unset;
 
         .menu-container {

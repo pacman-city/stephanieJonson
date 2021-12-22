@@ -22,7 +22,8 @@ export const GalleryContainer = styled.div`
             width: 100%;
             border-radius: 5px;
             object-fit: cover;
-            box-shadow: 0 15px 30px 5px #00000040;
+            box-shadow: -5px 8px 20px 10px #0000004C;
+            border: 1px solid #1113;
         }
     }
 
@@ -65,7 +66,6 @@ export const GalleryContainer = styled.div`
     .button-sqr {
         margin: 40px auto 0;
         width: 187px;
-        height: 53px;
     }
 
     @media screen and (min-width: 576px) {

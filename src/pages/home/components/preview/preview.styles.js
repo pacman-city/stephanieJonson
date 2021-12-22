@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import svg from '../../../../assets/images/svg/grey-dot.svg';
+import svgMask from '../../../../assets/images/svg/sidebar-mask.svg';
 
 
 export const PreviewContainer = styled.div`
-    height: 1368px;
+    height: 1000px;
     min-height: 500px;
     max-height: 100vh;
 
@@ -68,7 +69,6 @@ export const PreviewContainer = styled.div`
     .button-sqr {
         margin-top: 35px;
         width: 187px;
-        height: 53px;
     }
 
     .dots {
@@ -82,6 +82,16 @@ export const PreviewContainer = styled.div`
     }
 
     @media (min-width: 768px) {
+        &::before {
+            position: absolute;
+            right: 0;
+            top: 0;
+            content: '';
+            width: 125px;
+            height: 250%;
+            background: no-repeat center top 300px/125px auto url(${svgMask});
+        }
+
         .backdrop-slider .swiper-slide {
             background-blend-mode: unset;
         }
@@ -118,6 +128,10 @@ export const PreviewContainer = styled.div`
     @media (min-width: 1200px) {
         height: 744px;
         max-height: unset;
+
+        &::before {
+            display: none;
+        }
 
         .container::before {
             right: 160px;

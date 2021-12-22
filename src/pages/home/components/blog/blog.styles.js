@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import arrowRight from '../../../../assets/images/svg/arrow-right.svg';
-import arrowLeft from '../../../../assets/images/svg/arrow-left.svg';
+import {swiperNav} from '../../../../global.styles';
 
 
 export const BlogContainer = styled.div`
@@ -9,12 +8,12 @@ export const BlogContainer = styled.div`
     }
 
     .card{
-        box-shadow: 0 4px 20px 0 #00000026;
+        box-shadow: 2px 4px 25px 1px #00000026;
     }
 
     img {
         width: 100%;
-        height: 250px;
+        height: 70vw;
         object-fit: cover;
     }
 
@@ -36,17 +35,23 @@ export const BlogContainer = styled.div`
         }
     }
 
-    .swiper-button-prev::after {
-        content: url(${arrowLeft});
-    }
+    ${swiperNav}
 
-    .swiper-button-next::after {
-        content: url(${arrowRight});
+    @media screen and (min-width: 576px) {
+        img {
+            height: 40vw;
+        }
     }
-
-    @media screen and (max-width: 768px) {
+    
+    @media screen and (max-width: 767.98px) {
         .swiper {
             padding: 55px 10px 80px;
+        }
+    }
+    
+    @media screen and (min-width: 768px) {
+        img {
+            height: 23vw;
         }
     }
 
@@ -62,6 +67,10 @@ export const BlogContainer = styled.div`
     @media screen and (min-width: 1200px) {
         .cards {
             padding: 45px 180px 100px 226px;
+        }
+
+        img {
+            height: min(14vw, 255px);
         }
     }
 

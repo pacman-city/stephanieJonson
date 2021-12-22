@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import svgBackdrop from '../../assets/images/svg/team-backdrop.svg';
 
 
 export const TeamCardContainer = styled.div`
@@ -11,30 +10,17 @@ export const TeamCardContainer = styled.div`
     flex-direction: column;
     align-items: center;
 
-    .image {
-        width: 220px;
-        height: 220px;
-
-        background: no-repeat center/cover url(${svgBackdrop});
-        filter: drop-shadow(0 5px 30px #00000040);
-        
-        img {
-            padding: 15px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-    }
-
-    .name {
+    h3 {
         margin-top: 15px;
         text-transform: uppercase;
         font-family: NTR;
         font-size: 28px;
+        font-weight: 400;
         line-height: 1;
         text-align: center;
     }
 
-    .position {
+    b {
         margin-top: 8px;
         text-align: center;
         text-transform: uppercase;
@@ -48,25 +34,21 @@ export const TeamCardContainer = styled.div`
         display: flex;
         flex-direction: column;
         font-size: 16px;
+    }
 
-        p {
-            margin-top: 20px;
-            font-weight: 500;
-        }
+    span {
+        margin-top: 7px;
+    }
 
-        span {
-            margin-top: 7px;
-
-            &:first-of-type {
-                margin-top: 10px;
-            }
-        }
+    p {
+        margin-top: 20px;
+        padding-bottom: 3px;
+        font-weight: 500;
     }
 
     .button-sqr{
         align-self: flex-start;
         margin-top: 30px;
-        width: calc(100% - 25px);
-        height: 53px;
+        width: 195px;
     }
 `;

@@ -7,9 +7,6 @@ import img from '../../../../assets/images/image9.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Navigation, A11y } from 'swiper';
 import 'swiper/scss';
-import 'swiper/scss/pagination';
-import 'swiper/scss/navigation';
-import 'swiper/scss/a11y';
 
 
 SwiperCore.use([Pagination, Navigation, A11y]);
@@ -27,8 +24,7 @@ const Slider = ({ isSmall, isMobile }) => (
         <Swiper
             spaceBetween={20}
             slidesPerView={isSmall ? 1 : isMobile ? 1.8 : 3}
-            direction={'horizontal'}
-            speed={300}
+            speed={500}
             navigation
         >
             {data.map((item, i) =>
@@ -51,7 +47,7 @@ const Card = ({ title, subtitle }) => (
 );
 
 const Blog = () => {
-    const isSmall = useMediaQuery({ query: '(max-width: 576px)' });
+    const isSmall = useMediaQuery({ query: '(max-width: 575.98px)' });
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
 

@@ -71,9 +71,7 @@ export const TeamContainer = styled.div`
     }
 
     @media screen and (min-width: 1200px) {
-        padding-left: 46px;
         margin: 0 auto;
-        max-width: 766px;
     }
     
     @media screen and (min-width: 1400px) {

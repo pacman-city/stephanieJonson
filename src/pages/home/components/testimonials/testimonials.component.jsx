@@ -7,9 +7,6 @@ import { TestimonialsContainerMobile, TestimonialsContainer } from './testimonia
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Navigation, EffectCreative, A11y } from 'swiper';
 import 'swiper/scss';
-import 'swiper/scss/pagination';
-import 'swiper/scss/navigation';
-import 'swiper/scss/a11y';
 
 
 SwiperCore.use([Pagination, Navigation, EffectCreative, A11y]);
@@ -35,8 +32,7 @@ const MobileView = () => (
             <Swiper
                 spaceBetween={10}
                 slidesPerView={1.5}
-                direction={'horizontal'}
-                speed={300}
+                speed={500}
                 loop={true}
                 centeredSlides={true}
             >
@@ -53,8 +49,7 @@ const MobileView = () => (
         <div className="slider-content">
             <Swiper
                 slidesPerView={1}
-                direction={'horizontal'}
-                speed={300}
+                speed={500}
                 loop={true}
                 pagination={{
                     clickable: true,
@@ -71,7 +66,7 @@ const MobileView = () => (
                     <SwiperSlide key={i}>
                         <div>
                             <p>{item}</p>
-                            <Link to="/">View more</Link>
+                            <Link to="/" className='link-blue'>View more</Link>
                         </div>
                         <span>Mikel Oliver/Client</span>
                     </SwiperSlide>
@@ -93,7 +88,7 @@ const LargeView = () => (
                     spaceBetween={30}
                     slidesPerView={3}
                     direction={'vertical'}
-                    speed={300}
+                    speed={500}
                     loop={true}
                     centeredSlides={true}
                 >
@@ -114,7 +109,7 @@ const LargeView = () => (
                 <Swiper
                     slidesPerView={1}
                     effect={'creative'}
-                    speed={300}
+                    speed={400}
                     loop={true}
                     grabCursor={true}
                     pagination={{
@@ -129,7 +124,7 @@ const LargeView = () => (
                     navigation
                     creativeEffect={{
                         "prev": {
-                            "shadow": true,
+                            "shadow": false,
                             "translate": [0, 0, -400]
                         },
                         "next": {
@@ -141,7 +136,7 @@ const LargeView = () => (
                         <SwiperSlide key={i}>
                             <div>
                                 <p>{item}</p>
-                                <Link to="/">View more</Link>
+                                <Link to="/" className='link-blue'>View more</Link>
                             </div>
                             <span>Mikel Oliver/Client</span>
                         </SwiperSlide>

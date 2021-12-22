@@ -13,10 +13,6 @@ const Experience = () => (
                     Order Aсcepted
                 </div>
                 <div className='experinece-item'>
-                    <span>15</span>
-                    Years experience
-                </div>
-                <div className='experinece-item'>
                     <span>57</span>
                     Reviews
                 </div>
@@ -24,10 +20,6 @@ const Experience = () => (
                 <div className="experinece-item col">
                     <span>9 584</span>
                     Clients i served
-                </div>
-                <div className="experinece-item col">
-                    <span>3</span>
-                    Diplomas and certificates
                 </div>
                 <div className="experinece-item col">
                     <span>527</span>

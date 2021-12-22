@@ -3,19 +3,15 @@ import { Link } from 'react-router-dom';
 
 import { TeamCardContainer } from './team-card.styles';
 import img from '../../assets/images/image8.jpg';
+import Avatar from '../avatar/avatar.component';
 
 
 const TeamCard = ({ name, position, stats }) => (
     <TeamCardContainer>
-
-        <div className="image">
-            <img src={img} alt="team member" />
-        </div>
-
-        <p className='name'>{name}</p>
-        <p className="position">{position}</p>
-
-        <div className="stats">
+        <Avatar url={img} size='lg' />
+        <h3>{name}</h3>
+        <b>{position}</b>
+        <div className='stats'>
             <p>Expirience in:</p>
             {
                 stats.map((item, i) => <span key={i}>{item}</span>)

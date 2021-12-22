@@ -41,7 +41,7 @@ export const AboutContainer = styled.div`
             width: 40%;
             height: 40vw;
             background: no-repeat center/cover url(${img1});
-            box-shadow: 0 40px 60px 0 #00000040;
+            box-shadow: -5px 10px 35px 15px #00000033;
         }
     }
 
@@ -55,7 +55,6 @@ export const AboutContainer = styled.div`
     .button-sqr {
         margin: 30px auto 0;
         width: 187px;
-        height: 53px;
     }
 
     @media (min-width: 768px) {
@@ -101,6 +100,7 @@ export const AboutContainer = styled.div`
     
     @media (min-width: 1400px) {
         .container{
+            max-width: 1750px;
             grid-template: 1fr auto 1fr / 490px 1fr;
         }
 

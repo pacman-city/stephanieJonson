@@ -107,7 +107,6 @@ export const PricingContainer = styled.div`
     .button-sqr {
         margin: 40px auto 0;
         width: 187px;
-        height: 53px;
     }
 
     @media screen and (min-width: 768px) {
