@@ -1,4 +1,3 @@
-import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import TeamSlider from '../../components/team-slider/team-slider.component';

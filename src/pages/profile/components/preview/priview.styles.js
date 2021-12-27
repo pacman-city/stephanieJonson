@@ -3,14 +3,9 @@ import dots from '../../../../assets/images/svg/gold-dot.svg';
 
 
 export const PreviewContainer = styled.div`
-    padding-bottom: 75px;
-
-    .header-logo {
-        color: #BF9C24;
-    }
+    padding: 75px 0;
 
     .breadcrumbs {
-        margin-top: 40px;
         margin-bottom: 20px;
         text-transform: uppercase;
         font-size: 12px;
@@ -108,7 +103,7 @@ export const PreviewContainer = styled.div`
     }
 
     @media screen and (min-width: 768px) {
-        padding-bottom: 85px;
+        padding: 85px 0;
 
         .breadcrumbs {
             margin-bottom: 50px;
@@ -161,7 +156,7 @@ export const PreviewContainer = styled.div`
     }
 
     @media screen and (min-width: 1200px) {
-        padding-bottom: 110px;
+        padding: 110px 0;
 
         .breadcrumbs {
             margin-bottom: 40px;

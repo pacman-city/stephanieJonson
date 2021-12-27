@@ -1,7 +1,7 @@
-import React from 'react';
+import { useMediaQuery } from 'react-responsive'
+import { useInView } from 'react-intersection-observer';
 
-// import { useMediaQuery } from 'react-responsive'
-
+import FixedHeader from '../../components/fixed-header/fixed-header.component';
 import Preview from './components/preview/preview.component';
 import About from './components/about/about.component';
 import Experience from './components/experience/experience.component';
@@ -11,15 +11,17 @@ import Testimonials from './components/testimonials/testimonials.component';
 import Pricing from './components/pricing/pricing-component';
 import Team from './components/team/team.component';
 import Blog from './components/blog/blog.component';
-// import SideBarRight from '../../components/side-bar-right/side-bar-right.component';
 
 
 const Home = () => {
-    // const isTablet = useMediaQuery({ query: '(min-width: 768px)' });
+    const isDesktop = useMediaQuery({ query: '(min-width: 1200px)' });
+    const [target, isFixed] = useInView();
 
     return (
         <main>
+            {!isFixed && isDesktop && <FixedHeader />}
             <Preview />
+            <div ref={target}></div>
             <About />
             <Experience />
             <OurService />
@@ -33,4 +35,3 @@ const Home = () => {
 }
 
 export default Home;
-        // {isTablet && <SideBarRight />}

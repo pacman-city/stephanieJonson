@@ -1,16 +1,9 @@
-import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
 import TeamCard from '../team-card/team-card.component';
-
 import { TeamSliderContainer } from './team-slider.styles';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation, A11y } from 'swiper';
-import 'swiper/scss';
-
-
-SwiperCore.use([Pagination, Navigation, A11y]);
 
 const data = [
     { name: 'Joshua Weston', position: 'Master pro', stats: ['Nails - 10 years', 'Eyelashes - 8 years', 'Eyelashes - 8 years'] },

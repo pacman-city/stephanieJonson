@@ -3,40 +3,25 @@ import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
     display: flex;
+    align-items: flex-end;
 
     color: white;
     font-size: 18px;
     font-weight: 400;
     border-color: white;
-    pointer-events: all;
 
     span {
-        margin: 8px 0 0 10px;
-        border-bottom: 1.5px solid;
-    }
-
-    svg{
-        color: white;
-    }
-
-    @media screen and (min-width: 768px) {
-        font-size: 20px;
-        
-        span {
-            margin: 10px 0 0 10px;
-            border-width: 2px;
-        }
-        
-        svg {
-            height: 40px;
-        }
+        margin-bottom: 6px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid;
     }
 
     @media screen and (min-width: 1200px) {
-        padding-left: 20px;
-        span {
-            margin: 10px 0 0 10px;
-            border-width: 2.5px;
-        }
+        justify-content: center;
+        width: 135px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        width: 201px;
     }
 `;

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import img from '../../../../assets/images/image2.jpg';
 import slideImg from '../../../../assets/images/image7.jpg';
+import {darkSection} from '../../../../global.styles';
 
 
 export const PricingContainer = styled.div`
     padding-top: 70px;
     padding-bottom: 80px;
-    background: no-repeat center/cover linear-gradient(#2F3438FA, #2F3438FA), url(${img});
+    ${darkSection}
 
     h2 {
         color: white;

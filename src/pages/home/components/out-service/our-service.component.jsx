@@ -1,14 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive'
-import { OurServiceContainer } from './our-service.styles';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation, A11y } from 'swiper';
-import 'swiper/scss';
+import { OurServiceContainer } from './our-service.styles';
 
-
-SwiperCore.use([Pagination, Navigation, A11y]);
 
 const Slider = ({ services, isSmall }) => (
     <Swiper

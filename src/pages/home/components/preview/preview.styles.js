@@ -4,15 +4,20 @@ import svgMask from '../../../../assets/images/svg/sidebar-mask.svg';
 
 
 export const PreviewContainer = styled.div`
-    height: 1000px;
-    min-height: 500px;
-    max-height: 100vh;
+    background: #00000059;
 
-    position: relative;
+    .wrapper {
+        height: 1000px;
+        min-height: 500px;
+        max-height: 100vh;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: relative;
+    }
 
     .backdrop-slider {
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         left: 0;
         top: 0;
         height: 100%;
@@ -24,18 +29,19 @@ export const PreviewContainer = styled.div`
         
         .swiper-slide {
             background-repeat: no-repeat;
-            background-color: #0000005A;
             background-size: cover;
             background-position: center right 50%;
-            background-blend-mode: darken;
         }
     }
 
     .container {
         height: 100%;
         display: grid;
-        grid-template: repeat(3, auto) / 1fr;
+        grid-template: 1fr auto / 1fr;
         align-content: space-between;
+
+        position: relative;
+        background: #00000059;
     }
 
     .content {
@@ -82,33 +88,21 @@ export const PreviewContainer = styled.div`
     }
 
     @media (min-width: 768px) {
-        &::before {
-            position: absolute;
-            right: 0;
-            top: 0;
-            content: '';
-            width: 125px;
-            height: 250%;
-            background: no-repeat center top 300px/125px auto url(${svgMask});
-        }
-
-        .backdrop-slider .swiper-slide {
-            background-blend-mode: unset;
+        .wrapper {
+            &::before {
+                position: absolute;
+                z-index:1;
+                right: 0;
+                top: 0;
+                content: '';
+                width: 125px;
+                height: 250%;
+                background: no-repeat center top 300px/125px auto url(${svgMask});
+            }
         }
 
         .container {
-            position: relative;
-
-            &::before {
-                position: absolute;
-                left: 0;
-                top: 0;
-                content: '';
-                display: block;
-                height: 100%;
-                width: calc(100% - 125px);
-                background-color: #00000059;
-            }
+            background: linear-gradient( 90deg, #00000059, #00000059 calc(100% - 125px), transparent calc(100% - 125px));
         }
 
         .content-title {
@@ -126,27 +120,27 @@ export const PreviewContainer = styled.div`
     }
 
     @media (min-width: 1200px) {
-        height: 744px;
-        max-height: unset;
+        .wrapper {
+            height: 744px;
+            max-height: unset;
 
-        &::before {
-            display: none;
+            &::before {
+                display: none;
+            }
         }
 
-        .container::before {
-            right: 160px;
-            left: unset;
+        .container {
+            background: linear-gradient( 90deg, #00000059, #00000059 calc(100% - 160px), transparent calc(100% - 160px));
         }
-
+        
         .content-title {
             height: 204px;
         }
     }
-    
+
     @media (min-width: 1400px) {
-        .container::before {
-            width: 250%;
-            right: 205px;
+        .container {
+            background: linear-gradient( 90deg, #00000059, #00000059 calc(100% - 226px), transparent calc(100% - 226px));
         }
     }
 `;

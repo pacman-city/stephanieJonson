@@ -1,4 +1,3 @@
-import React from 'react';
 import { TeamCardsContainer } from './team-cards.styles';
 import TeamCard from '../team-card/team-card.component';
 

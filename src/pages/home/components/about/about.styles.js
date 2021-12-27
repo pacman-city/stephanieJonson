@@ -6,7 +6,7 @@ import img1 from '../../../../assets/images/image1.jpg';
 
 export const AboutContainer = styled.div`
     padding: 80px 0;
-
+    
     .image {
         margin-top: 30px;
         height: 500px;
@@ -16,12 +16,19 @@ export const AboutContainer = styled.div`
     .image-backdrop {
         grid-area: 1 / 1 / -1 / -1;
         margin: 25px 8px 25px 52px;
-        background: no-repeat right 50% bottom/cover url(${img});
-
+        background: #0000007F no-repeat right 50% bottom/cover url(${img});
+        background-blend-mode: darken;
+        
         div {
             height: 100%;
-            background: #0000007F no-repeat right 50px center/auto calc(100% - 50px) url(${svgMask});
-            mix-blend-mode: hard-light;
+            width: 100%;
+
+            -webkit-mask-image: url(${svgMask});
+            mask-image: url(${svgMask});
+            mask-repeat: no-repeat;
+            mask-position: right 50px center;
+            mask-size: auto 90%;
+            background: #0000007F no-repeat right 50% bottom/cover url(${img});
         }
     }
 
@@ -30,8 +37,6 @@ export const AboutContainer = styled.div`
         grid-area: 1 / 1 / -1 / -1;
 
         border: 7px solid white;
-
-        isolation: isolate;
 
         display: flex;
         align-items: center;
@@ -89,7 +94,7 @@ export const AboutContainer = styled.div`
         }
     }
 
-    @media (min-width: 1200px) {
+    @media screen and (min-width: 1200px) {
         padding: 100px 0 85px 0;
 
         .container{
@@ -98,7 +103,7 @@ export const AboutContainer = styled.div`
         }
     }
     
-    @media (min-width: 1400px) {
+    @media screen and (min-width: 1400px) {
         .container{
             max-width: 1750px;
             grid-template: 1fr auto 1fr / 490px 1fr;
@@ -121,5 +126,5 @@ export const AboutContainer = styled.div`
         .button-sqr {
             margin: 35px 0 0 50px;
         }
-    }
+}
 `;

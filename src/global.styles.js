@@ -23,31 +23,14 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    html {
-        scroll-behavior: smooth;
-    }
-
-    html,
     body {
-        height: 100%;
         margin: 0;
-    }
-
-    body {
         font-size: 16px;
         font-family: Gilroy;
         font-style: normal;
         color: #2F3438;
         line-height: normal;
         background: #EDEDED;
-    }
-
-    main {
-        margin: 0 auto;
-    }
-
-    .app {
-        position: relative;
     }
 
     img,
@@ -183,7 +166,6 @@ export const GlobalStyle = createGlobalStyle`
         color: #004FE8;
     }
 
-
     .container {
         padding-left: 10px;
         padding-right: 10px;
@@ -207,41 +189,6 @@ export const GlobalStyle = createGlobalStyle`
             margin: 0 auto;
             max-width: 1920px;
             padding-right: 226px;
-        }
-    }
-
-    .header-logo {
-        visibility: hidden;
-
-        @media screen and (min-width: 355px) {
-            display: block;
-            margin: 0 auto;
-            visibility: visible;
-            padding-top: 30px;
-            justify-self: center;
-
-            font-size: 18px;
-            line-height: 1;
-            font-weight: 500;
-            color: white;
-            text-align: center;
-
-            &:after {
-                content: '.';
-                color: #BF9C24;
-                font-size: 28px;
-                line-height: 0;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            padding-top: 33px;
-            font-size: 24px;
-            position: relative;
-
-            &:after {
-                font-size: 35px;
-            }
         }
     }
 
@@ -358,9 +305,17 @@ export const paginationStyles = css`
     }
 `;
 
+export const darkSection = css`
+    background-image: linear-gradient(#2F3438FA, #2F3438FA), url(${background});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+`;
+
 export const experienceStyles = css`
     padding: 70px 0;
-    background: no-repeat center/cover linear-gradient(#2F3438FA, #2F3438FA), url(${background});
+
+    ${darkSection}
 
     h2 {
         margin-bottom: 30px;
@@ -385,7 +340,11 @@ export const experienceStyles = css`
             margin-bottom: 3px;
             font-size: 40px;
             font-weight: 700;
-            color: #BF9C24;
+            color: #0000;
+
+            background: linear-gradient(#BF9C24 30%, #bb9823, #BF9C24 70%);
+            -webkit-background-clip: text;
+            background-clip: text;
         }
     }
 

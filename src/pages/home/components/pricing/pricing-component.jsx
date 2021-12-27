@@ -1,21 +1,12 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation, EffectCreative, A11y } from 'swiper';
-import 'swiper/scss';
-import 'swiper/scss/pagination';
-import 'swiper/scss/navigation';
-import 'swiper/scss/a11y';
-
 import { PricingContainer } from './pricing.styles';
 import img from '../../../../assets/images/image6.jpg';
 import { ReactComponent as ArrowRight } from '../../../../assets/images/svg/arrow-right.svg';
 import { ReactComponent as ArrowLeft } from '../../../../assets/images/svg/arrow-left.svg';
 
-
-SwiperCore.use([Pagination, Navigation, EffectCreative, A11y]);
 
 const data = ['Hairstyle', 'Nails', 'Makeup', 'Makeup1', 'Makeup2', 'Makeup3', 'Makeup4', 'Makeup5', 'Makeup6'];
 const data1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

@@ -1,15 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { TestimonialsContainerMobile, TestimonialsContainer } from './testimonials.styles';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation, EffectCreative, A11y } from 'swiper';
-import 'swiper/scss';
-
-
-SwiperCore.use([Pagination, Navigation, EffectCreative, A11y]);
 
 const data = ['Hairstyle', 'Nails', 'Makeup'];
 const data1 = [

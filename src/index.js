@@ -8,8 +8,9 @@ import {PersistGate} from 'redux-persist/integration/react';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
-import App from './App';
+import App from './components/app/app';
 import { GlobalStyle } from './global.styles.js';
+
 
 
 ReactDOM.render(

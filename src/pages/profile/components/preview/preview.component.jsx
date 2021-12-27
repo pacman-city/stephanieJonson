@@ -1,4 +1,3 @@
-import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +18,6 @@ const Preview = () => {
     return (
         <PreviewContainer>
             <div className='container'>
-                <span className="header-logo">Stephanie Jonson</span>
                 <div className="breadcrumbs">HOME / OUR TEAM</div>
 
                 <div className="wrapper">
